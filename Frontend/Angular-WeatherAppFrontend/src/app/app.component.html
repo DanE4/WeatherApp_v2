@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Angular-Frontend</title>
+</head>
+<body>
+
+<form name="myForm" action="">
+  <input type="text" name="Location" placeholder="Location" id="addname" [(ngModel)]="addName">
+  <input type="button" value="Add" (click)="addCity()">
+</form>
+
+<form name="myForm2" action="">
+  <input type="text" name="Location2" placeholder="Location" id="delname" [(ngModel)]="delName">
+  <input type="button" value="Delete" (click)="deleteCity()">
+</form>
+
+<button (click)="onListing()">Get List</button>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Temp</th>
+    <th>Time</th>
+  </tr>
+  <tr *ngFor="let data of response">
+    <td>{{data.cityName}}</td>
+    <td>{{data.temperature}}</td>
+    <td>{{data.time}}</td>
+  </tr>
+</table>
+</body>
+</html>

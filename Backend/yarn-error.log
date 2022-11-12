@@ -1,0 +1,49 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add -D ts-node-dev
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.12.1
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/dani_eros/Documents/IT/VSC/WeatherApp_v2/Backend/package.json: Unexpected token } in JSON at position 248
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "node-server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.ts",
+    "scripts": {
+      "start": "ts-node app.ts",
+      "build": "tsc"
+    },
+    "author": "DanE",
+    "license": "ISC",
+    "dependencies": {
+      "express": "^4.18.2",
+    },
+    "devDependencies": {
+      "@types/node": "^18.11.9",
+      "typescript": "^4.8.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
